@@ -1,0 +1,14 @@
+services:
+  backend:
+    image: svelte-external-api-test_backend:latest
+    ports:
+      - "8080:80"
+
+  reverse-proxy:
+    image: caddy:latest
+    volumes:
+      - ./reverse-proxy/Caddyfiles/:/etc/caddy/
+      - ./reverse-proxy/data:/data/
+      - ./reverse-proxy/config:/config/
+    network_mode: host
+    

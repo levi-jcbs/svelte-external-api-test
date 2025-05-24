@@ -1,0 +1,15 @@
+{
+	http_port 8001
+	https_port 4001
+}
+
+localhost {
+	tls internal
+
+	# It does only work with localhost. Idk why.
+	reverse_proxy localhost:5173
+
+	handle_path /api/* {
+		reverse_proxy :8080
+	}
+}
