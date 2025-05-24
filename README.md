@@ -17,4 +17,3 @@ No matter the URL, Svelte inherits cookies from "parent" request and does not do
 | ------------------ | ----------------------- | ---------------------------------------- |
 | Cookie inheritance | :x:                     | :white_check_mark:                       |
 | Runs once          | :white_check_mark:      | :x:                                      |
-|                    |                         |                                          |
